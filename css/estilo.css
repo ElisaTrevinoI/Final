@@ -30,7 +30,16 @@ header {
     grid-area: carousel;
 }
 
+.imgCarousel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
 .galeriaVideos {
+    display: grid;
     grid-area: galeriaVideos;
 }
 
@@ -38,57 +47,88 @@ footer {
     grid-area: footer;
 }
 
-
-h2 {
-    padding-top: 100px;
+.encabezado2 {
+    grid-area: encabezado2;
+    padding-top: 50px;
+    text-align: center;
 }
 
+.textoVideos {
+    grid-area: textoVideos;
+}
 
 .videos {
-    display: grid;
     gap: 15px;
     justify-items: center;
 }
 
-.contenedor {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "header"
-        "navbar"
-        "carousel"
-        "galeriaVideos"
-        "footer";
+.video {
+    width: 50%;
+    height: 50%;
 }
 
 
+@media (min-width:480px) {
 
-@media (min-width:320px) {
 
-    
 
-.videos {
-    display: grid;
-    gap: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+    .videos {
+        display: grid;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .video {
+        width: 70%;
+        height: 70%;
+    }
 
     .contenedor {
         display: grid;
         height: 100vh;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas:
-            "header header"
-            "navbar navbar"
-            "carousel carousel"
-            "galeriaVideos galeriaVideos"
-            "footer footer";
+            "header"
+            "navbar"
+            "carousel"
+            "galeriaVideos"
+            "footer";
     }
 
+    .galeriaVideos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .2fr 1fr;
+        grid-template-areas:
+            "encabezado2"
+            "textoVideos"
+            "videos";
+    }
+}
+
+@media (min-width:768px) {
+
+    .encabezado2 {
+        padding-top: 50px;
+        text-align: left;
+    }
+
+    .galeriaVideos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .2fr .2fr 1fr;
+        grid-template-areas:
+            "encabezado2 encabezado2"
+            "textoVideos textoVideos"
+            "videos videos";
+    }
+
+    .videos {
+        display: grid;
+        gap: 15px;
+
+    }
 
 
 }
