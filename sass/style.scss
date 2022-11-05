@@ -1,22 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+@import "fuentes";
+@import "generales";
+@import "index";
 
 
-* {
-    margin: 0;
-    padding: 0;
+
+.encabezadoProductos{
+    padding-bottom: 25px;
 }
-
-body {
-    text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-    background-color: rgb(113, 240, 198);
-    color: #001f3f;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 
 header {
     grid-area: header;
@@ -26,73 +16,11 @@ header {
     grid-area: navbar;
 }
 
-.carousel {
-    grid-area: carousel;
-}
-
-.imgCarousel {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-
-.galeriaVideos {
-    display: grid;
-    grid-area: galeriaVideos;
-}
 
 footer {
     grid-area: footer;
 }
 
-.encabezado2 {
-    grid-area: encabezado2;
-    padding-top: 50px;
-    text-align: center;
-}
-
-.textoVideos {
-    grid-area: textoVideos;
-    text-align: center;
-}
-
-.videos {
-    display: grid;
-    gap: 15px;
-    justify-items: center;
-}
-
-.video {
-    width: 50%;
-    height: 50%;
-}
-
-
-.contenedor {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "header"
-        "navbar"
-        "carousel"
-        "galeriaVideos"
-        "footer";
-}
-
-
-.galeriaVideos {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "encabezado2"
-        "textoVideos"
-        "videos";
-}
 
 .imgEstambres {
     width: 200px;

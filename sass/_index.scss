@@ -1,0 +1,63 @@
+
+.carousel {
+    grid-area: carousel;
+}
+
+.imgCarousel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.encabezado2 {
+    grid-area: encabezado2;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.textoVideos {
+    grid-area: textoVideos;
+    text-align: center;
+}
+
+.galeriaVideos {
+    display: grid;
+    grid-area: galeriaVideos;
+}
+
+.videos {
+    display: grid;
+    gap: 15px;
+    justify-items: center;
+}
+
+.video {
+    width: 50%;
+    height: 50%;
+}
+
+
+.contenedor {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "carousel"
+        "galeriaVideos"
+        "footer";
+}
+
+
+.galeriaVideos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "encabezado2"
+        "textoVideos"
+        "videos";
+}
