@@ -13,3 +13,53 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+header {
+    grid-area: header;
+}
+
+.encabezadoInicial {
+    padding-bottom: 25px;
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+footer {
+    grid-area: footer;
+    padding-top: 50px;
+}
+
+.textoInformativo1 {
+    font-size: .8em;
+}
+
+@media (min-width:$medidaMd) {
+
+    header {
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .encabezado1 {
+        margin-top: 6rem;
+
+    }
+
+    .textoInformativo1 {
+        text-align: left;
+        font-size: .9em;
+    }
+}
+
+
+@media (min-width:$medidaLg) {
+
+    .textoInformativo1 {
+        font-size: 1em;
+    }
+
+}

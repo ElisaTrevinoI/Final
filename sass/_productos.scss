@@ -1,0 +1,110 @@
+.contenedorProductos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "galeriaProductos"
+        "footer";
+}
+
+.imgEstambres {
+    width: 200px;
+    height: 215px;
+    border-radius: $borde;
+}
+
+.imgPatrones {
+    width: 204px;
+    height: 260px;
+    border-radius: $borde;
+}
+
+.imgAccesorios {
+    @extend .imgPatrones;
+}
+
+.galeriaProductos {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@mixin transition {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+@mixin transform {
+    transform: scale(1.3) rotate(5deg);
+}
+
+@media (min-width:$medidaSm) {
+
+    .imgEstambres {
+        width: 150px;
+        height: 165px;
+    }
+
+    .galeriaProductos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .textoProductos {
+        padding-bottom: 50px;
+    }
+}
+
+
+@media (min-width:$medidaMd) {
+
+
+    .textoProductos {
+        padding-bottom: 50px;
+        text-align: left;
+    }
+
+    .imgEstambres {
+        width: 200px;
+        height: 215px;
+    }
+
+    .galeriaProductos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .imgEstambres {
+        @include transition;
+    }
+
+    .imgEstambres:hover {
+        @include transform;
+    }
+
+
+}
+
+@media (min-width:$medidaLg) {
+
+    .textoProductos {
+        padding-bottom: 25px;
+    }
+
+    .imgEstambres {
+        width: 220px;
+        height: 235px;
+    }
+
+    .imgEstambres {
+        @include transition;
+    }
+
+    .imgEstambres:hover {
+        @include transform;
+    }
+
+
+}

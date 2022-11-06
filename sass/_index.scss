@@ -1,4 +1,3 @@
-
 .carousel {
     grid-area: carousel;
 }
@@ -10,6 +9,7 @@
     width: 100%;
 }
 
+
 .encabezado2 {
     grid-area: encabezado2;
     padding-top: 50px;
@@ -18,6 +18,7 @@
 
 .textoVideos {
     grid-area: textoVideos;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -40,7 +41,6 @@
 
 .contenedor {
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
@@ -60,4 +60,71 @@
         "encabezado2"
         "textoVideos"
         "videos";
+}
+
+@media (min-width:$medidaSm) {
+
+
+    .video {
+        width: 70%;
+        height: 70%;
+    }
+
+    .galeriaVideos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .2fr 1fr;
+        grid-template-areas:
+            "encabezado2"
+            "textoVideos"
+            "videos";
+    }
+
+}
+
+
+@media (min-width:$medidaMd) {
+
+    .encabezado2, .textoVideos {
+        text-align: left;
+    }
+
+    .galeriaVideos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr .2fr 1fr;
+        grid-template-areas:
+            "encabezado2 encabezado2"
+            "textoVideos textoVideos"
+            "videos videos";
+    }
+
+    .videos {
+        display: grid;
+        gap: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+}
+
+
+@media (min-width:$medidaLg) {
+
+    .video {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .videos {
+        display: grid;
+        gap: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
 }
